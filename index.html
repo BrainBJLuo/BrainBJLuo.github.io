@@ -116,7 +116,7 @@ body{background:var(--ivory);min-width:320px}
 .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
 .gallery-work{border:1px solid #d8dbd2;box-shadow:0 14px 36px rgba(30,44,37,.035);display:flex;flex-direction:column;min-width:0;transition:transform .24s,box-shadow .24s}
 .gallery-work:hover{transform:translateY(-3px);box-shadow:0 22px 48px rgba(30,44,37,.075)}
-.project-work{border:1px solid #b7a47e;box-shadow:0 10px 28px rgba(99,79,43,.055)}
+.project-work{border:2px solid #ad966b;box-shadow:0 10px 28px rgba(99,79,43,.055)}
 .project-art{position:relative;min-height:310px;background:linear-gradient(145deg,#f5efde,#eadfc5);padding:0;overflow:hidden;border-bottom:1px solid #cbbd9f}
 .project-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .project-art-top,.project-art-bottom{position:absolute;left:17px;right:17px;z-index:2;display:flex;justify-content:space-between;gap:15px;color:#7b745f;font:600 8px/1.4 var(--mono);letter-spacing:.11em;pointer-events:none}
@@ -552,6 +552,51 @@ body:has(dialog[open]){overflow:hidden}
 @media(prefers-reduced-motion:reduce){.research-cover .research-entrance{transition:none}}
 
 </style>
+  <style>
+/* Final journal typography, selected from the layout study. */
+#research{padding-top:46px;scroll-margin-top:85px}
+#research .section-intro{margin-bottom:29px;align-items:center}
+#research .section-intro h2{font-size:52px;margin-top:10px}
+.research-summary-line{border-top-color:#9eaa9b;border-bottom:0}
+.feature-paper.journal-paper{display:block;padding:32px 0 54px;border-top:1px solid #b1bbab}
+.feature-paper.journal-paper:last-of-type{padding-bottom:48px}
+.journal-meta{display:flex;justify-content:space-between;align-items:baseline;gap:20px;color:#667862;font:500 9px/1.6 var(--mono);letter-spacing:.09em;text-transform:uppercase}
+.journal-meta b{font-weight:500;color:#8d7653;margin-right:11px}
+.journal-status{white-space:nowrap;color:#7f7058;letter-spacing:.08em}
+.journal-heading h3{font:400 clamp(30px,3.1vw,43px)/1.12 var(--serif);letter-spacing:-.037em;max-width:850px;margin:18px 0 13px;color:#213d36;overflow-wrap:normal;text-wrap:balance}
+.journal-authors{font:12px/1.7 var(--sans);color:#53645b;margin:0}
+.journal-venue{font:italic 12px/1.7 var(--serif);color:#7a7d6c;margin:4px 0 0}
+.journal-body{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:52px;align-items:start;margin-top:28px}
+.journal-copy{min-width:0;padding:3px 0 0}
+.journal-abstract h4{font:600 10px/1.5 var(--sans);letter-spacing:.13em;text-transform:uppercase;color:#51664f;margin:0 0 13px}
+.journal-abstract>p{font:400 16px/1.79 var(--serif);color:#42534a;letter-spacing:0;margin:0;text-wrap:pretty}
+.journal-keywords{padding-top:18px;margin:23px 0 0;border-top:1px solid #d9ddd1;font:10.5px/1.9 var(--sans);color:#78816f}
+.journal-keywords span{display:block;color:#657a62;font:500 9px/1.5 var(--mono);letter-spacing:.09em;text-transform:uppercase;margin-bottom:6px}
+.journal-paper .feature-visual{min-width:0;width:auto;order:initial!important}
+.journal-paper .research-cover{padding:18px 19px 16px;box-shadow:none;background:#e3e7db;border-color:#b4c0ab}
+.journal-paper .research-cover .research-cover-meta{font-size:7px;letter-spacing:.08em}
+.journal-paper .research-cover h4{font-size:21px;line-height:1.2;margin:12px 0 15px}
+.journal-paper .research-cover-deck{display:none}
+.journal-paper .research-cover .research-overview{margin-bottom:15px}
+.journal-paper .research-cover .research-overview figcaption{font-size:9.5px;line-height:1.7;margin-top:10px}
+.journal-paper .research-cover .research-entrances{gap:9px}
+.journal-paper .research-cover .research-entrance{padding:11px 13px 10px;box-shadow:none}
+.journal-paper .research-cover .research-entrance small,.journal-paper .research-cover .research-entrance>span{display:none}
+.journal-paper .research-cover .research-entrance strong{font:400 16px/1.25 var(--serif);display:flex;align-items:center;justify-content:space-between;gap:8px}
+.journal-paper .research-cover .research-entrance strong::after{content:'↗';font:13px/1 var(--sans)}
+.journal-paper .research-cover .research-cover-note{font-size:8px;line-height:1.6;margin:12px 0 0}
+@media(max-width:1000px){.journal-body{gap:30px;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.journal-heading h3{font-size:36px}}
+@media(max-width:760px){
+ #research{padding-top:32px}#research .section-intro h2{font-size:43px}
+ .feature-paper.journal-paper{display:flex;flex-direction:column;gap:0;padding:26px 0 36px}
+ .journal-heading{width:100%}.journal-meta{font-size:8px;gap:12px}.journal-meta>span:first-child{max-width:70%}.journal-meta b{margin-right:5px}
+ .journal-heading h3{font-size:32px;max-width:none;text-wrap:initial}
+ .journal-authors{font-size:11px}.journal-venue{font-size:11px}.journal-body{display:flex;flex-direction:column;gap:25px;margin-top:23px;width:100%}
+ .journal-abstract>p{font-size:16px;line-height:1.8}.journal-keywords{margin-top:20px;padding-top:14px}.journal-paper .feature-visual{width:100%;margin:0}
+ .journal-paper .research-cover{padding:17px}.journal-paper .research-cover h4{font-size:20px}
+}
+
+</style>
   <title>Bingjun Luo — Research & Projects</title>
 </head>
 <body>
@@ -567,7 +612,7 @@ window.PAPER_DATA = [
     title:'Adaptive Hard Trimming with Oracle Refits',
     authors:'Bingjun Luo, Tingyin Wang, Junxian Zhu, Xueqin Wang',
     venue:'Scientia Sinica (Mathematica)',
-    chips:['Outlier detection','Splicing','Robust regression'],
+    chips:['robust regression','outlier detection','mean-shift model','sparsity constraint','splicing algorithm'],
     problem:'When outliers mask one another, residual-based trimming can discard clean observations while retaining contamination. How can we recover the true inlier set without knowing the contamination level or searching exponentially many subsets?',
     abstract:[
       'We develop a polynomial complexity algorithm AODE for the hard trimming formulation in robust regression which is NP-hard, mitigate the effect of outlier masking and design a sparsity information criterion (SIC) to adaptively select the contamination level.',
@@ -590,7 +635,7 @@ window.PAPER_DATA = [
     title:'Semiparametric Differential Modeling for Trajectory Data',
     authors:'Bingjun Luo, Jianbin Tan, Xueqin Wang',
     venue:'Journal of the Royal Statistical Society · Series B (Statistical Methodology)',
-    chips:['Functional data','Equation discovery','Green functions'],
+    chips:['model-free statistical inference','dynamical systems','equation discovery','heterogeneous functional trajectories','nonparametric regression'],
     problem:'Discovering equations from noisy trajectories is difficult when the order, differential operator and driving function are unknown. Can information shared across heterogeneous functional trajectories reveal the governing dynamics without any structural assumptions of driving function and further decompose the dynamics?',
     abstract:[
       'We develop a semiparametric framework GFSM to integrate shared information from heterogeneous functional trajectories, discover unknown order differential equations without any common structural assumption on driving function, and accomplish the tasks of both prediction and dynamic decomposition.',
@@ -613,7 +658,7 @@ window.PAPER_DATA = [
     title:'Coupled Support Search for Robust Sparse Regression',
     authors:'Bingjun Luo, Tingyin Wang, Junxian Zhu, Xueqin Wang',
     venue:'Manuscript in preparation',
-    chips:['Sparse selection','Outlier detection','High dimensions'],
+    chips:['feature selection','robust high-dimensional inference','ℓ₀ formulation','sparse structure'],
     problem:'In high-dimensional regression, outliers can make irrelevant predictors appear important, while a misspecified model can conceal the outliers. How can we recover both supports without compounding these errors?',
     abstract:[
       'We develop an efficient coupled support search algorithm RCSS for robust high dimensional regression that jointly performs feature selection and outlier detection through ℓ₀ constrained best subset optimization.',
@@ -2553,7 +2598,7 @@ function paperHeader(p){const venue=p.status==='review'?`${p.venue} · UNDER REV
 function paperAbstract(p){return `<div class="paper-abstract"><h4>Abstract</h4><ul>${p.abstract.map(item=>`<li>${esc(item)}</li>`).join('')}</ul></div>`;}
 function paperViz(p){if(p.id==='aode')return window.AODE_LAB.cover();if(p.id==='gfsm')return window.GFSM_LAB.html();if(p.id==='rcss')return window.RCSS_LAB.html();return window.SPHERE_LAB.html();}
 function paperCard(p,i){return `<article class="feature-paper ${i%2?'flipped':''}" id="paper-${p.id}"><div class="feature-visual">${paperViz(p)}</div><div class="feature-copy">${paperMeta(p)}${paperHeader(p)}<p class="feature-standfirst">${esc(p.problem)}</p><div class="feature-rule"></div>${paperAbstract(p)}</div></article>`;}
-function researchSection(){return `<section class="research-section editorial-section" id="research"><div class="wrap"><div class="section-intro"><div><span class="kicker">01 / SELECTED RESEARCH</span><h2>Research.</h2></div><p>Statistical learning, robust estimation, and interpretable dynamical systems. Each manuscript is summarized through its central question and method logic, with an original schematic visualization.</p></div><div class="research-summary-line"><span>FOUR RESEARCH MANUSCRIPTS</span><strong>02 UNDER REVIEW · 02 IN PREPARATION</strong></div>${papers.map(paperCard).join('')}<div class="gallery-bottom-note">Manuscript status follows the current CV. The first three panels use computed synthetic examples. The sphere panel compares numerical candidates; it does not establish global optimality.</div></div></section>`;}
+function researchSection(){return `<section class="research-section editorial-section" id="research"><div class="wrap"><div class="section-intro"><div><span class="kicker">01 / SELECTED RESEARCH</span><h2>Research.</h2></div><p>Statistical learning, robust estimation, and interpretable dynamical systems. Each manuscript is summarized through its central question and method logic, with an original schematic visualization.</p></div><div class="research-summary-line"><span>FOUR RESEARCH MANUSCRIPTS</span><strong>02 UNDER REVIEW · 02 IN PREPARATION</strong></div>${papers.map(paperCard).join('')}</div></section>`;}
 function projectCard(p){const cls=p.linkKind==='private'?'project-action is-private':'project-action';const paragraphs=Array.isArray(p.description)?p.description:[p.description];return `<article class="gallery-work project-work" id="project-${p.id}"><div class="gallery-art project-art"><canvas class="project-canvas" data-project-visual="${p.id}" role="img" aria-label="${esc(p.alt)}"></canvas><div class="project-art-top"><span>${esc(p.artTop)}</span><span>${p.number} / 04</span></div><div class="project-art-bottom"><span>${esc(p.artBottom)}</span><span>${esc(p.artKind||'METHOD DIAGRAM')}</span></div></div><div class="gallery-info"><div class="project-meta"><span>${esc(p.category)}</span><span class="project-year">${esc(p.year)}</span></div><h3>${esc(p.title)}</h3>${paragraphs.map(text=>`<p>${esc(text)}</p>`).join('')}<div class="project-advisors">${esc(p.advisors)}</div><div class="project-tags">${p.tags.map(tag=>`<span>${esc(tag)}</span>`).join('')}</div><a class="${cls}" href="${esc(p.link)}" ${p.linkKind==='external'?'target="_blank" rel="noopener noreferrer"':''}><span>${esc(p.link.replace(/^https?:\/\//,''))}</span><span aria-hidden="true">↗</span></a></div></article>`;}
 function projectsSection(){return `<section class="research-section gallery-section projects-section" id="projects"><div class="wrap"><div class="section-intro"><div><span class="kicker">02 / SELECTED WORK</span><h2>Projects.</h2></div><p>Applied work across medical vision–language models, heterogeneous dynamics, clinical-trial analysis, and panel econometrics. Each project has its own visual language and a direct resource or contact link.</p></div><div class="gallery-intro-note"><span>04 PROJECTS</span><span>VISUAL STUDIES · RESPONSIVE GALLERY</span></div><div class="gallery-grid">${projects.map(projectCard).join('')}</div><div class="project-disclaimer">Project figures summarize the linked repositories and articles. The dialysis figure uses reported study estimates; the other diagrams illustrate methods and mechanisms.</div></div></section>`;}
 function footer(){return `<footer class="minimal-footer"><div class="minimal-footer-inner"><div class="footer-left"><strong>Bingjun Luo</strong><span>M.S. IN STATISTICS · UNIVERSITY OF SCIENCE AND TECHNOLOGY OF CHINA</span></div><a class="footer-contact" href="mailto:ustclht@mail.ustc.edu.cn">Get in touch ↗</a></div></footer>`;}
@@ -2569,6 +2614,31 @@ function mountProjectVisuals(){
  });
 }
 render();
+})();
+
+</script>
+<script>
+/* Selected journal layout. Move the mounted figures to preserve their controls. */
+(() => {
+  'use strict';
+  const esc = text => String(text).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
+  document.body.dataset.researchLayout = 'journal';
+  for (const p of window.PAPER_DATA) {
+    const article = document.getElementById(`paper-${p.id}`);
+    const visual = article.querySelector('.feature-visual');
+    const header = document.createElement('header');
+    header.className = 'journal-heading';
+    header.innerHTML = `<div class="journal-meta"><span><b>${esc(p.number)}</b> / ${esc(p.topic)}</span><span class="journal-status">${p.status==='review'?'Under review':'In preparation'}</span></div><h3 id="journal-title-${p.id}">${esc(p.title)}</h3><p class="journal-authors">${esc(p.authors)}</p>${p.status==='review'?`<p class="journal-venue">${esc(p.venue)}</p>`:''}`;
+    const body = document.createElement('div');
+    body.className = 'journal-body';
+    body.innerHTML = `<div class="journal-copy"><section class="journal-abstract" aria-labelledby="abstract-${p.id}"><h4 id="abstract-${p.id}">Abstract</h4><p>${esc(p.abstract.join(' '))}</p></section><p class="journal-keywords"><span>Keywords</span>${p.chips.map(esc).join('; ')}</p></div>`;
+    body.append(visual);
+    article.classList.add('journal-paper');
+    article.setAttribute('aria-labelledby',`journal-title-${p.id}`);
+    article.replaceChildren(header,body);
+  }
+  document.querySelector('#research .section-intro > p').textContent = 'Robust statistical learning, differential modeling, and geometric optimization. Four manuscripts with interactive illustrations of their methods.';
+  document.querySelector('#research .gallery-bottom-note')?.remove();
 })();
 
 </script>
